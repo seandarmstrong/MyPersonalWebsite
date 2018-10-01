@@ -56,11 +56,15 @@
 }
 
 .footer.segment {
-  padding: 5em 0em;
+  padding: 2em 0em;
 }
 
 .secondary.pointing.menu .toc.item {
   display: none;
+}
+
+#linkedin {
+  padding: 0em 2em 0em 0em;
 }
 
 @media only screen and (max-width: 700px) {

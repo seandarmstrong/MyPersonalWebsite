@@ -16,6 +16,20 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="semantic/dist/semantic.min.js"></script>
+    <script src="../dist/components/visibility.js"></script>
+    <script src="../dist/components/sidebar.js"></script>
+    <script src="../dist/components/transition.js"></script>
+    <script>
+        $(document)
+            .ready(function () {
+                // create sidebar and attach to menu open
+                $('.ui.sidebar')
+                    .sidebar('attach events', '.toc.item')
+                    ;
+
+            })
+            ;
+    </script>
 </head>
 
 <body>
@@ -26,91 +40,101 @@
             <a class="active item" href="portfolio.html">Sean's Portfolio</a>
         </div>
     </div>
-    <div class="ui vertical stripe segment">
-        <div class="ui middle aligned stackable grid container">
-            <div class="row">
-                <div class="center aligned column">
-                    <h1 class="header">Past/Current Projects</h1>
+
+    <!-- Sidebar Menu-->
+    <div class="ui vertical inverted sidebar menu">
+        <a class="item" href="index.html">Home</a>
+        <a class="item" href="about.html">About Sean</a>
+        <a class="active item" href="portfolio.html">Sean's Portfolio</a>
+    </div>
+
+    <div class="pusher">
+        <div class="ui vertical stripe segment">
+            <div class="ui middle aligned stackable grid container">
+                <div class="row">
+                    <div class="center aligned column">
+                        <h1 class="header">Past/Current Projects</h1>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="eight wide column">
-                    <div class="ui special cards centered">
-                        <div class="card">
-                            <div class="blurring dimmable image">
-                                <div class="ui inverted dimmer">
-                                    <div class="content">
-                                        <div class="center">
-                                            <a class="ui primary button" href="https://github.com/seandarmstrong/What2Pack"
-                                                target="_new">View
-                                                GitHub</a>
+                <div class="row">
+                    <div class="eight wide column">
+                        <div class="ui special cards centered">
+                            <div class="card">
+                                <div class="blurring dimmable image">
+                                    <div class="ui inverted dimmer">
+                                        <div class="content">
+                                            <div class="center">
+                                                <a class="ui primary button" href="https://github.com/seandarmstrong/What2Pack"
+                                                    target="_new">View
+                                                    GitHub</a>
+                                            </div>
                                         </div>
                                     </div>
+                                    <img src="/Images/what2pack_edited.JPG">
                                 </div>
-                                <img src="/Images/what2pack_edited.JPG">
-                            </div>
-                            <div class="content">
-                                <div class="header">What2Pack?</div>
-                                <div class="meta">
-                                    <p>Helps you plan your suitcase.</p>
+                                <div class="content">
+                                    <div class="header">What2Pack?</div>
+                                    <div class="meta">
+                                        <p>Helps you plan your suitcase.</p>
+                                    </div>
+                                </div>
+                                <div class="extra content">
+                                    <p>Recommends clothing to pack based on historical weather.</p>
                                 </div>
                             </div>
-                            <div class="extra content">
-                                <p>Recommends clothing to pack based on historical weather.</p>
+                        </div>
+                    </div>
+                    <div class="eight wide column">
+                        <div class="ui special cards centered">
+                            <div class="card">
+                                <div class="blurring dimmable image">
+                                    <div class="ui inverted dimmer">
+                                        <div class="content">
+                                            <div class="center">
+                                                <div class="ui primary button" href="https://github.com/seandarmstrong/CoffeeShopWebApp"
+                                                    target="_new">View GitHub</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img src="/Images/coffee.jpeg">
+                                </div>
+                                <div class="content">
+                                    <div class="header">Coffee Shop Web App</div>
+                                    <div class="meta">
+                                        <p>A simple coffee shop storefront</p>
+                                    </div>
+                                </div>
+                                <div class="extra content">
+                                    <p>A MVC web application that utilizes a SQL database.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="eight wide column">
-                    <div class="ui special cards centered">
-                        <div class="card">
-                            <div class="blurring dimmable image">
-                                <div class="ui inverted dimmer">
-                                    <div class="content">
-                                        <div class="center">
-                                            <div class="ui primary button" href="https://github.com/seandarmstrong/CoffeeShopWebApp"
-                                                target="_new">View GitHub</div>
+                <div class="row">
+                    <div class="column">
+                        <div class="ui special cards centered">
+                            <div class="card">
+                                <div class="blurring dimmable image">
+                                    <div class="ui inverted dimmer">
+                                        <div class="content">
+                                            <div class="center">
+                                                <div class="ui primary button" href="https://github.com/seandarmstrong/TaskManagerWebApp"
+                                                    target="_new">View GitHub</div>
+                                            </div>
                                         </div>
                                     </div>
+                                    <img src="/Images/checkmark.png">
                                 </div>
-                                <img src="/Images/coffee.jpeg">
-                            </div>
-                            <div class="content">
-                                <div class="header">Coffee Shop Web App</div>
-                                <div class="meta">
-                                    <p>A simple coffee shop storefront</p>
-                                </div>
-                            </div>
-                            <div class="extra content">
-                                <p>A MVC web application that utilizes a SQL database.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="column">
-                    <div class="ui special cards centered">
-                        <div class="card">
-                            <div class="blurring dimmable image">
-                                <div class="ui inverted dimmer">
-                                    <div class="content">
-                                        <div class="center">
-                                            <div class="ui primary button" href="https://github.com/seandarmstrong/TaskManagerWebApp"
-                                                target="_new">View GitHub</div>
-                                        </div>
+                                <div class="content">
+                                    <div class="header">Task Manager Web App</div>
+                                    <div class="meta">
+                                        <p>A simple task manager</p>
                                     </div>
                                 </div>
-                                <img src="/Images/checkmark.png">
-                            </div>
-                            <div class="content">
-                                <div class="header">Task Manager Web App</div>
-                                <div class="meta">
-                                    <p>A simple task manager</p>
+                                <div class="extra content">
+                                    <p>A MVC web application that utilizes a SQL database.</p>
                                 </div>
-                            </div>
-                            <div class="extra content">
-                                <p>A MVC web application that utilizes a SQL database.</p>
                             </div>
                         </div>
                     </div>
@@ -118,14 +142,36 @@
             </div>
         </div>
     </div>
-    <footer>
-        <p class="bottom-nav"><a href="index.html">Home</a> | <a href="about.html">About Sean</a> | <a href="portfolio.html">Sean's
-                Portfolio</a></p>
-        <p class="footer-p" id="creator">Created by: Sean Armstrong</p>
-        <p class="footer-p" id="email">Contact Information: <a href="mailto:armstrong.d.sean@gmail.com">armstrong.d.sean</a></p>
-        <p class="footer-p" id="linkedin"><a href="https://www.linkedin.com/in/seandarmstrong/" class="fa fa-linkedin"></a></p>
-        <p class="footer-p"><a href="https://github.com/snrmstrng/"><img src="/Images/GitHub-Mark-32px.png" alt="GitHub logo"></a></p>
-    </footer>
+    <div class="ui inverted vertical footer segment">
+        <div class="ui container">
+            <div class="ui stackable inverted divided equal height stackable grid">
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <a class="item" href="index.html">Home</a>
+                        <a class="item" href="about.html">About Sean</a>
+                        <a class="item" href="portfolio.html">Sean's Portfolio</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <div class="ui center aligned inverted segment">
+                        <a href="https://www.linkedin.com/in/seandarmstrong/" target="_new">
+                            <i id="linkedin" class="fab fa-linkedin fa-2x"></i>
+                        </a>
+
+                        <a href="https://github.com/snrmstrng/">
+                            <i class="main__projects__item__btn-icon fab fa-github fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <p>Created by: Sean Armstrong</p>
+                    <p>Contact Information:
+                        <a href="mailto:armstrong.d.sean@gmail.com">armstrong.d.sean@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         $('.ui.special.cards .image').dimmer({
             on: 'hover'
